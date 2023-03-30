@@ -13,7 +13,7 @@ import java.util.Scanner;
             {
                 a[i]=s.next();
             }
-
+            s.close();
             //******************INSERTION SORT starts here*******************
 
             String temp;
@@ -34,7 +34,7 @@ import java.util.Scanner;
             {
                 System.out.println(a[j]);
             }
-            s.close();
+           
             
         }
     }

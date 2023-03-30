@@ -1,4 +1,3 @@
-package Recursion;
 import java.util.Scanner;
 public class Nth_Fibo_Num 
 {   public static void main(String[] args) 

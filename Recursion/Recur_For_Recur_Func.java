@@ -1,5 +1,3 @@
-package Recursion;
-
 public class Recur_For_Recur_Func 
 {   public static void main(String[] args) 
     {  

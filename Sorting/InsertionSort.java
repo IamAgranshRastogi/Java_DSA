@@ -11,7 +11,7 @@ public class InsertionSort
         {
             a[i]=s.nextInt();
         }
-
+        s.close();
         //******************INSERTION SORT starts here*******************
         int temp,j;    // temp for choosing no.  , j for sorted array creation
         for(int i=1;i<size;i++)     // loop to start from KEY and check till last element
@@ -27,6 +27,6 @@ public class InsertionSort
         for( j=0;j<size;j++)
         {  System.out.println(a[j]);
         }
-        s.close();
+        
     }
 }

@@ -1,5 +1,3 @@
-package Recursion;
-
 public class First10Num
 {
     /*public static void main(String[] args) 
