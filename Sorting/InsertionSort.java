@@ -27,5 +27,6 @@ public class InsertionSort
         for( j=0;j<size;j++)
         {  System.out.println(a[j]);
         }
+        s.close();
     }
 }
