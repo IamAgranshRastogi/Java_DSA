@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 class SetBitsInN
-{ public static void main(String[] args) 
+{ 
+  public static void main(String[] args) 
   {  Scanner s=new Scanner(System.in);
      System.out.println("Enter Number to check no. of Set bits in it : "); 
      int x = s.nextInt();
@@ -11,10 +12,18 @@ class SetBitsInN
      s.close();
   }
   private static int setBits(int n)
-  { int count=0;
+  { 
+    /*int count=0;
     while(n>0)   
     { count++;
       n -= (n & (-n));
+    }
+    return count;  */
+    
+    int count = 0;
+    while(n>0)
+    { count++;
+      n = n & (n-1);
     }
     return count;
   }
