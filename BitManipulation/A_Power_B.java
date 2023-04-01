@@ -1,5 +1,3 @@
-package BitManipulation;
-
 import java.util.Scanner;
 public class A_Power_B
 { public static void main(String[] args) 
