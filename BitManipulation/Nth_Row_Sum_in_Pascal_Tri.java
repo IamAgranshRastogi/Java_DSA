@@ -1,5 +1,3 @@
-package BitManipulation;
-
 import java.util.Scanner;
 public class Nth_Row_Sum_in_Pascal_Tri
 { public static void main(String[] args) 

@@ -18,6 +18,7 @@ public class XOR_A_till_B
     { ans2 ^= i;
     }
     System.out.println(ans2);
+    s.close();
   }
   static int xor(int a)
   { if(a%4==0)

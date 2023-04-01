@@ -1,4 +1,3 @@
-package BitManipulation;
 public class Find_i_Digit
 { public static void main(String[] args) 
   {  int n=11;

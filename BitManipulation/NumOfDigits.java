@@ -1,5 +1,3 @@
-package BitManipulation;
-
 import java.util.Scanner;
 public class NumOfDigits 
 { public static void main(String[] args) 
