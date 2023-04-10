@@ -1,4 +1,3 @@
-package Maths;
 import java.util.Scanner;
 public class Prime_Num_3 
 { public static void main(String[] args) 

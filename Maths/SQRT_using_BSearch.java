@@ -1,4 +1,3 @@
-package Maths;
 //import java.util.Scanner;
 public class SQRT_using_BSearch
 { public static void main(String[] args) 

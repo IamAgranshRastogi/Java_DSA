@@ -1,4 +1,3 @@
-package Maths;
 import java.util.Scanner;
 // Newton Rophson Method 
 // We guess the sqrt of N as X then we 
@@ -16,7 +15,7 @@ public class Newton_SQRT
     double root;
     while(true)
     { root=0.5*( x + (n/x));
-      if(Math.abs(root - x) < 0.00001)
+      if(Math.abs(root - x) < 0.0001)
       { break;
       }
       x = root;

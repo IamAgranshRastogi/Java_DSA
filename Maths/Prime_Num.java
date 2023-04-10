@@ -1,5 +1,3 @@
-package Maths;
-
 import java.util.Scanner;
 //Usual Approach         
 //Time Comp: O(n)
