@@ -11,14 +11,14 @@ public class Count_Zeros
   {  return helper(n,0);
   }
   private static int helper(int n,int c)
-  { if(n==0)
+  { if(n==0)  // Base Case
     { return c;
     }
     int rem = n%10;
-    if(rem==0)
-    { return helper(n/10,c+1);
+    if(rem==0) 
+    { return helper(n/10,c+1); // increase count
     }
-    return helper(n/10,c);
+    return helper(n/10,c); // no change in count
   }
 }
  
