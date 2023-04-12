@@ -10,12 +10,12 @@ public class RecuceToZeroSteps
   { return helper(num,0);
   }
   private static int helper(int num,int steps)
-  { if(num==0)
+  { if(num==0)  //base case
     {  return steps;
     }
-    if(num%2==0)
+    if(num%2==0) // For n : (even)
     { return helper(num/2,steps+1);
-    }
+    }  // For odd
     return helper(num-1,steps+1);
   }
 }
