@@ -5,6 +5,7 @@ public class ReduceToZeroSteps
     System.out.println("Enter a number : ");
     int n =s.nextInt();
     System.out.println(numberOfSteps(n));
+    s.close();
   }  
   public static int numberOfSteps(int num)
   { return helper(num,0);
