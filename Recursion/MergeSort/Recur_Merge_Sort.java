@@ -2,7 +2,7 @@ package MergeSort;
 import java.util.Arrays;
 public class Recur_Merge_Sort 
 {  public static void main(String[] args) 
-    { int []arr={5,4,3,2,1};
+    { int []arr={5,4,3,2,1,89,78,56};
       arr=Divide(arr);
       System.out.println(Arrays.toString(arr));
     }
@@ -28,7 +28,7 @@ public class Recur_Merge_Sort
             i++;
          }
          else
-         { mix[k]=first[i];
+         { mix[k]=second[j];
             j++;
          }
          k++;
