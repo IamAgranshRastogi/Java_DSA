@@ -1,59 +1,45 @@
 import java.util.*;
-public class QueueUsingStack
-{
-        static class Queue
-        {
-            static Stack<Integer> s1 = new Stack<Integer>();
-            static Stack<Integer> s2 = new Stack<Integer>();
 
-            static void enQueue(int x)
-            {
-                // Move all elements from s1 to s2
-                while (!s1.isEmpty())
-                {
-                    s2.push(s1.pop());
-                    //s1.pop();
-                }
+public class QueueUsingStack {
+    static class Queue {
+        private Stack<Integer> s1 = new Stack<>();
+        private Stack<Integer> s2 = new Stack<>();
 
-                // Push item into s1
-                s1.push(x);
-
-                // Push everything back to s1
-                while (!s2.isEmpty())
-                {
-                    s1.push(s2.pop());
-                    //s2.pop();
-                }
+        void enQueue(int x) {
+            // Move elements from s1 to s2 to maintain queue order
+            while (!s1.isEmpty()) {
+                s2.push(s1.pop());
             }
 
-            // Dequeue an item from the queue
-            static int deQueue()
-            {
-                // if first stack is empty
-                if (s1.isEmpty())
-                {
-                    System.out.println("Q is Empty");
-                    System.exit(0);
-                }
+            // Push the new element onto s1
+            s1.push(x);
 
-                // Return top of s1
-                int x = s1.peek();
-                s1.pop();
-                return x;
+            // Push back elements from s2 to s1
+            while (!s2.isEmpty()) {
+                s1.push(s2.pop());
             }
-        };
+        }
 
-        // Driver code
-        public static void main(String[] args)
-        {
-            Queue q = new Queue();
-            q.enQueue(1);
-            q.enQueue(2);
-            q.enQueue(3);
+        int deQueue() {
+            if (s1.isEmpty()) {
+                System.out.println("Queue is Empty");
+                System.exit(0);
+            }
 
-            System.out.println(q.deQueue());
-            System.out.println(q.deQueue());
-            System.out.println(q.deQueue());
+            // Pop the front element from s1 (since it contains queue elements)
+            return s1.pop();
         }
     }
+
+    public static void main(String[] args) {
+        Queue q = new Queue();
+        q.enQueue(1);
+        q.enQueue(2);
+        q.enQueue(3);
+
+        System.out.println(q.deQueue());
+        System.out.println(q.deQueue());
+        System.out.println(q.deQueue());
+    }
+}
 

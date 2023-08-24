@@ -1,101 +1,73 @@
-public class QueueUsingArray
-{// Java program for array
-// implementation of queue
-
-    // A class to represent a queue
+public class QueueUsingArray {
+    // Class to represent a queue
     class Queue {
         int front, rear, size;
         int capacity;
         int array[];
 
-        public Queue(int capacity)
-        {
+        public Queue(int capacity) {
             this.capacity = capacity;
             front = this.size = 0;
-            rear = capacity - 1;
+            rear = -1; // Initialize rear to -1 instead of capacity - 1
             array = new int[this.capacity];
         }
 
-        // Queue is full when size becomes
-        // equal to the capacity
-        boolean isFull(Queue queue)
-        {
-            return (queue.size == queue.capacity);
+        boolean isFull() {
+            return (size == capacity); // Use instance variables directly
         }
 
-        // Queue is empty when size is 0
-        boolean isEmpty(Queue queue)
-        {
-            return (queue.size == 0);
+        boolean isEmpty() {
+            return (size == 0); // Use instance variables directly
         }
 
-        // Method to add an item to the queue.
-        // It changes rear and size
-        void enqueue(int item)
-        {
-            if (isFull(this))
+        void enqueue(int item) {
+            if (isFull())
                 return;
-            this.rear = (this.rear + 1)
-                    % this.capacity;
-            this.array[this.rear] = item;
-            this.size = this.size + 1;
-            System.out.println(item
-                    + " enqueued to queue");
+            rear = (rear + 1) % capacity;
+            array[rear] = item;
+            size = size + 1;
+            System.out.println(item + " enqueued to queue");
         }
 
-        // Method to remove an item from queue.
-        // It changes front and size
-        int dequeue()
-        {
-            if (isEmpty(this))
+        int dequeue() {
+            if (isEmpty())
                 return Integer.MIN_VALUE;
 
-            int item = this.array[this.front];
-            this.front = (this.front + 1)
-                    % this.capacity;
-            this.size = this.size - 1;
+            int item = array[front];
+            front = (front + 1) % capacity;
+            size = size - 1;
             return item;
         }
 
-        // Method to get front of queue
-        int front()
-        {
-            if (isEmpty(this))
+        int getFront() { // Renamed to getFront() to avoid naming conflict
+            if (isEmpty())
                 return Integer.MIN_VALUE;
 
-            return this.array[this.front];
+            return array[front];
         }
 
-        // Method to get rear of queue
-        int rear()
-        {
-            if (isEmpty(this))
+        int getRear() { // Renamed to getRear() to avoid naming conflict
+            if (isEmpty())
                 return Integer.MIN_VALUE;
 
-            return this.array[this.rear];
+            return array[rear];
         }
     }
 
     // Driver class
-    public class Test
-    {
-        public static void main(String[] args)
-        {
-            Queue queue = new Queue(1000);
+    public static void main(String[] args) {
+        QueueUsingArray outer = new QueueUsingArray(); // Need an instance of the outer class
+        Queue queue = outer.new Queue(1000); // Create an instance of the inner Queue class
 
-            queue.enqueue(10);
-            queue.enqueue(20);
-            queue.enqueue(30);
-            queue.enqueue(40);
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
 
-            System.out.println(queue.dequeue()
-                    + " dequeued from queue\n");
+        System.out.println(queue.dequeue() + " dequeued from queue\n");
 
-            System.out.println("Front item is "
-                    + queue.front());
+        System.out.println("Front item is " + queue.getFront());
 
-            System.out.println("Rear item is "
-                    + queue.rear());
-        }
+        System.out.println("Rear item is " + queue.getRear());
     }
 }
