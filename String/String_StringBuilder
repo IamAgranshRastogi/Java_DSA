@@ -1,0 +1,16 @@
+Strings are immutable.
+Each time u try to change the value of String a new object will get created in heap memory and now reference variable will start pointing to it.
+
+It can lead to high time complexity because heap will store all values.
+
+String is not recommended if we have to make changes in a string by applying a loop cause it can create Quadratic Time Complexity.
+
+time to copy a string ~ string length (n)
+no. of times loop iterates ~ m
+TC: (m*n)
+
+
+
+
+Here comes in picture StringBuilder it do not creates new object it just makes changes in the values.
+ 

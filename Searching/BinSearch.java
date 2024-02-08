@@ -1,4 +1,3 @@
-package Searching;
 import java.util.Scanner;
 public class BinSearch
 { public static void main(String[] args) 

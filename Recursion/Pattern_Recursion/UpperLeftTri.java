@@ -7,8 +7,8 @@
 
 */
 
-class UpperLeftTri
-{ public static void main(String[] args) 
- {
- }
-}
+// class UpperLeftTri
+// { public static void main(String[] args) 
+//  {
+//  }
+// }
