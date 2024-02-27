@@ -25,6 +25,7 @@ class Pyramid{
         row += 1;
         System.out.println();
     }
+    System.out.println(1);
     s.close();
   }
 }

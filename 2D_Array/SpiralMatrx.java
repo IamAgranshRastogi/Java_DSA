@@ -1,52 +1,60 @@
 public class SpiralMatrx
 { 
-    public static void printSpiral(int mx[][]) 
-    {   int rwstrt=0;
-        int colstrt=0;
-        int rwend=mx.length-1;
-        int colend=mx[0].length-1;
+    public static void printSpiral(int matrix[][]) 
+    {   int top=0;
+        int left=0;
+        int bottom=matrix.length-1;
+        int right=matrix[0].length-1;
         
-        while(rwstrt <= rwend && colstrt <= colend)
+        while(top <= bottom && left <= right)
         { //top
-          for(int j=colstrt;j<=colend;j++)
-          { System.out.print(mx[rwstrt][j]+" ");
+          for(int j=left;j<=right;j++)
+          { System.out.print(matrix[top][j]+" ");
           }
+          
 
           //right
-          for(int i=rwstrt+1;i<=rwend;i++)
-          { System.out.print(mx[i][colend]+" ");
+          for(int i=top+1;i<=bottom;i++)
+          { System.out.print(matrix[i][right]+" ");
           }
+          
 
           //bottom
-          for(int j=colend-1;j>=colstrt;j--)
-          { if(rwstrt==rwend) 
+          for(int j=right-1;j>=left;j--)
+          { if(top==bottom) 
             { break;
             }
-            System.out.print(mx[rwend][j]+" ");
+            System.out.print(matrix[bottom][j]+" ");
           }
+          
 
           //left
-          for(int i=rwend-1;i>=rwstrt+1;i--)
-          { if(colstrt==colend) 
+          for(int i=bottom-1;i>=top+1;i--)
+          { if(left==right) 
             { break;
             }
-            System.out.print(mx[i][colstrt]+" ");
+            System.out.print(matrix[i][left]+" ");
           }
-
-          colstrt++;
-          rwstrt++;
-          colend--;
-          rwend--;
+          top++;
+          right--;
+          bottom--;
+          left++;
         }
         System.out.println();
     }
     public static void main(String[] args) 
-    { int mx[][]= {{1,2,3,4},
-                   {5,6,7,8},
-                   {9,10,11,12},
-                   {13,14,15,16}};
+    { int matrix [][]={{1,2,3,4,5},
+                        {6,7,8,9,10},
+                        {11,12,13,14,15}};
+ 
+      int matrix2[][]= {{ 1,  2,  3,  4},
+                       { 5,  6,  7,  8},
+                       { 9, 10, 11, 12},
+                       {13, 14, 15, 16}};
       
-      printSpiral(mx);
+      printSpiral(matrix);
+      System.out.println("--------------------");
+      printSpiral(matrix2);
     }
 
 }
