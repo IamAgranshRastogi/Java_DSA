@@ -1,4 +1,4 @@
-package String.StringBuilder;
+package String_practice.StringBuilder_Ques;
 
 public class ToString {
     public static void main(String[] args) {

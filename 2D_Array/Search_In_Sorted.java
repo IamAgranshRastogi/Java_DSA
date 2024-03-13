@@ -6,7 +6,7 @@ public class Search_In_Sorted
         {27,29,37,48},
         {32,33,39,50}
         };
-        int key= 35 ;
+        int key= 48 ;
         // SortedSearch(mx,key);   
        StaircaseSearch(mx, key);
         // System.out.println(x); 

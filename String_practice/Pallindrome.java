@@ -1,4 +1,4 @@
-package String;
+package String_practice;
 
 public class Pallindrome {
     // racecar , noon , madam

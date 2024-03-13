@@ -1,4 +1,4 @@
-package String;
+package String_practice;
 // Interning: More than 1 reference variables("str1,str2") can point to same value("Kohli") stored in heap memory.
 
 // (str3) new keyword creates a new object and then point to it.

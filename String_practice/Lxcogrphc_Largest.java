@@ -1,4 +1,4 @@
-package String;
+package String_practice;
 
 // Lexicographically Largest: and anger ant dog "duck" ...
 

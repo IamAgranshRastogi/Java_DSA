@@ -1,4 +1,4 @@
-package String.StringBuilder;
+package String_practice.StringBuilder_Ques;
 
 public class ToUpperCase {
     public static String toUpperCase(String str){

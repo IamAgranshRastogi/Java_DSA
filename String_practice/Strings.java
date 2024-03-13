@@ -1,4 +1,4 @@
-package String;
+package String_practice;
 import java.util.*;
 public class Strings {
     public static void printLetters(String str) {

@@ -1,4 +1,4 @@
-package String;
+package String_practice;
 
 public class Shortest_Path {
     public static float getShortestPath(String path){
