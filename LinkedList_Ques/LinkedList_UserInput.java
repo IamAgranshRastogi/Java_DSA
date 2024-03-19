@@ -11,9 +11,9 @@ class Node{
     }
 }
 
-public class Linked_List {
+public class LinkedList_UserInput {
     Node head;
-    Linked_List(){
+    LinkedList_UserInput(){
         head = null;
     }
 
@@ -52,7 +52,7 @@ public class Linked_List {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        Linked_List ll= new Linked_List();
+        LinkedList_UserInput ll= new LinkedList_UserInput();
         System.out.println("Enter the number of elements you want to insert:");
         int n = s.nextInt();
         System.out.println("Enter the elements:");

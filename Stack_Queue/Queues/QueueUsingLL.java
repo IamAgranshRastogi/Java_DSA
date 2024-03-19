@@ -1,3 +1,4 @@
+package Queues;
 class QNode {
     int key;
     QNode next;

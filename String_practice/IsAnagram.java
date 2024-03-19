@@ -14,7 +14,10 @@ public class IsAnagram {
         s.close();
     }
     public static boolean TwoStringsAnagram(String s1,String s2) {
-        int count[]=new int[256];
+        if(s1.length() != s2.length()){
+            return false;
+        }
+        int count[]=new int[256]; // for count of each ASCII value of (256)
         for(int i=0;i<s1.length();i++){
             count[s1.charAt(i)]++;
             count[s2.charAt(i)]--;
