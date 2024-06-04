@@ -15,7 +15,7 @@ public class Min_Max_using_Min_Comparisons {
     public static void Min_Max_in_Arr(int a[],int n) {
         int i,max,min;
         if(n%2==0){
-            if(a[0]>a[1]){ max=a[0];  min=a[1];}
+            if(a[0]>a[1]){ max=a[0];  min=a[1]; }
             else{ min=a[0]; max=a[1]; }
             i=2;
         }

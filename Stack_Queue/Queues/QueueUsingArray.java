@@ -1,4 +1,4 @@
-package Queues;
+package queues;
 public class QueueUsingArray {
     // Class to represent a queue
     class Queue {

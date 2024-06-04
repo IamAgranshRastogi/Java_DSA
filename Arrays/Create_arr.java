@@ -1,8 +1,6 @@
 public class Create_arr 
 {  
-/* 
-
-      
+/*   
     int a1[];   //Array Declaration
     int[] a2; 
     

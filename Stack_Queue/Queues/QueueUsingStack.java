@@ -1,4 +1,4 @@
-package Queues;
+package queues;
 import java.util.*;
 
 public class QueueUsingStack {

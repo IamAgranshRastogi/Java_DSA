@@ -2,7 +2,6 @@ class Max_Subarr_Sum{
     public static void maxSubarrSum1(int nums[]){
         int cursum=0;
         int maxsum=Integer.MIN_VALUE;
-
         for(int i=0;i<nums.length;i++){
             int start=i;
             for(int j=i;j<nums.length;j++){
@@ -23,5 +22,4 @@ class Max_Subarr_Sum{
         int nums[]={1,-2,6,-1,3};
         maxSubarrSum1(nums);
     }
-
 }

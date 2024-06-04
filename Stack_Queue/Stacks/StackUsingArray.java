@@ -1,4 +1,4 @@
-package Stacks;
+package stacks;
 public class StackUsingArray
 {/* Java program to implement basic stack
 operations */
@@ -64,8 +64,7 @@ operations */
     class Main
     {
         public static void main(String args[])
-        {
-            StackUsingArray s = new StackUsingArray();
+        {   StackUsingArray s = new StackUsingArray();
             s.push(10);
             s.push(20);
             s.push(30);

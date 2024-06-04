@@ -6,7 +6,7 @@ class CreateLL{
     class Node1{
         int data1;
         Node1 nextptr;
-        
+            
         Node1(int data1, Node1 nextptr){
             this.data1 = data1;
             this.nextptr = nextptr;
@@ -16,32 +16,31 @@ class CreateLL{
             this.data1 = data1;
             this.nextptr = null; 
         }
-    
     }
     
     
     //Adding ele as Head 
     public void AddHead(int data1){
         Node1 newnode = new Node1(data1);
-        if( head == null){   // If Empty LL
-            head = newnode;
-            return;
+        if(head == null){   // If Empty LL
+           head = newnode;
+           return;
         } 
         newnode.nextptr = head;    
         head = newnode; 
     }
-
+  
     // Adding ele in LL after Head 
     public void AddEle(int data1){
         Node1 newnode = new Node1(data1);
         if( head == null){    // If Empty LL
-            head = newnode;
-            return;
+           head = newnode;
+           return;
         } 
         newnode.nextptr = head.nextptr;
         head.nextptr = newnode; 
     }
-
+  
     // Adding ele in LL at last
     public void AddLast(int data1){
         Node1 newnode = new Node1(data1);
@@ -70,10 +69,6 @@ class CreateLL{
         System.out.println("NULL");
     }
     
-    
-
-
-
     public static void main(String[] args) {
         CreateLL list1 = new CreateLL();
         Scanner s = new Scanner(System.in);
@@ -108,4 +103,4 @@ class CreateLL{
         }
         s.close();
     }
-}
+}  
