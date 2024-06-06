@@ -46,6 +46,6 @@ public class Sum_N_num {
     // TC: O(1)  SC:O(1)
     public static void solve2(int n) {
         int sum = n*(n + 1) / 2;
-        System.out.println("The sum of the first " + N + " numbers is: " + sum);
+        System.out.println("The sum of the first " + n + " numbers is: " + sum);
     }    
 }

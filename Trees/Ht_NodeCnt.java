@@ -1,17 +1,17 @@
 package Trees;
 
-public class BinaryTree2 {
-    static class Node1{
+public class Ht_NodeCnt {
+    static class Node {
         int data;
-        Node1 left,right;
+        Node left,right;
 
-        public Node1(int data){
+        public Node(int data){
             this.data = data;
             this.left = null;
             this.right = null;
         }
     }
-    public static int height(Node1 root){
+    public static int height(Node root){
         if(root == null){
             return 0;
         }
@@ -20,7 +20,7 @@ public class BinaryTree2 {
         return Math.max(lh,rh)+1;
     }
 
-    public static int count(Node1 root){
+    public static int count(Node root){
         if(root == null){
             return 0;
         }
@@ -36,13 +36,13 @@ public class BinaryTree2 {
                  / \   / \
                 4   5 6   7  
         */
-        Node1 root = new Node1(1);
-        root.left = new Node1(2);
-        root.right = new Node1(3);
-        // root.left.left = new Node1(4);
-        // root.left.right = new Node1(5);
-        // root.right.left = new Node1(6);
-        // root.right.right = new Node1(7);
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+        root.right.left = new Node(6);
+        root.right.right = new Node(7);
         System.out.println(height(root));
     }
 }

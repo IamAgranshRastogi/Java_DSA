@@ -1,61 +1,69 @@
 package Trees;
 
-import java.util.Queue;
-import java.util.Stack;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ArrayList;
-
-class TreeNode{
-    int data;
-    TreeNode left;
-    TreeNode right;
-    TreeNode (){}
-    TreeNode(int data){  this.data=data; }
-    TreeNode(int data, TreeNode left, TreeNode right) {
-        this.data = data;
-        this.left = left;
-        this.right = right;
-    }
-}
 public class Traversals {
-    
-    // TC: O(n)  SC:O(n)
-    public List<List<Integer>> LevelOrder(TreeNode root){
-        Queue<TreeNode> queue = new LinkedList<>();
-        List<List<Integer>> wrapList = new LinkedList<>();
-        if(root == null) return wrapList;
-        queue.offer(root);
-        while(!queue.isEmpty()){
-            int levelNum = queue.size();
-            List<Integer> subList = new LinkedList<>();
-            for(int i=0; i<levelNum; i++){
-                if(queue.peek().left != null)    queue.offer(queue.peek().left);
-                if(queue.peek().right != null)   queue.offer(queue.peek().right);
-                subList.add(queue.poll().data);
-            }
-            wrapList.add(subList);
-        }
-        return wrapList;
-    }
+    static class Node { 
+        int data;
+        Node left;
+        Node right;
 
-    
-    // TC: O(n)  SC: O(n)
-    public List<Integer> PreOrder(TreeNode root){
-        List<Integer> preorder = new ArrayList<Integer>();
-        if(root == null) return preorder;
-        Stack<TreeNode> st = new Stack<>();
-        st.push(root);
-        while(!st.isEmpty()){ 
-            root = st.pop();
-            preorder.add(root.data);
-            if(root.right != null){
-                st.push(root.right);
-            }
-            if(root.left != null){
-                st.push(root.left);
-            }
-            return preorder;
+        Node(int data){
+            this.data = data;
+            this.left = null;
+            this.right = null;
         }
-    }   
+    }
+    
+    static class BinaryTree {
+        private int idx = -1;
+        
+        public Node buildTree(int[] nodes){
+            idx++;
+            if(idx >= nodes.length || nodes[idx] == -1){
+                return null;
+            }
+            Node newNode = new Node(nodes[idx]); 
+            newNode.left = buildTree(nodes);
+            newNode.right = buildTree(nodes);
+            return newNode;
+        }
+
+        public void preorder(Node root){     // Root Left Right => TC: O(n) SC: O(h)
+            if(root == null){
+                return;
+            }
+            System.out.print(root.data + " ");
+            preorder(root.left);
+            preorder(root.right);
+        }
+
+        public void inorder(Node root){      // Left Root Right => TC: O(n) SC: O(h)
+            if(root == null){
+                return;
+            }
+            inorder(root.left);
+            System.out.print(root.data + " ");
+            inorder(root.right);
+        }
+
+        public void postorder(Node root){    // Left Right Root => TC: O(n) SC: O(h)
+            if(root == null){
+                return;
+            }
+            postorder(root.left);
+            postorder(root.right);
+            System.out.print(root.data + " ");
+        }
+
+        public static void main(String[] args){
+            int nodes[] = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1}; 
+            BinaryTree tree = new BinaryTree();
+            Node root = tree.buildTree(nodes);
+            System.out.println("Pre Order Traversal: ");
+            tree.preorder(root);
+            System.out.println("\n In Order Traversal: ");
+            tree.inorder(root);
+            System.out.println("\n Post Order Traversal: ");
+            tree.postorder(root);
+        }
+    } 
 }
